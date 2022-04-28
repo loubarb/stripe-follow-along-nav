@@ -16,59 +16,47 @@
         <a href="#">About Me</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://logo.clearbit.com/wesbos.com">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+            <img src="./img/IMG-2195-avi.JPG">
+            <p>Hi! I'm Louis Barbati. I'm a passionate and motivated front end
+              developer with experience creating
+              dynamic web pages continuing to learn
+              and build on new coding skills,
+              languages and projects.</p>
           </div>
         </div>
       </li>
       <li>
-        <a href="#">Courses</a>
+        <a href="#">Projects</a>
         <ul class="dropdown courses">
           <li>
-            <span class="code">RFB</span>
-            <a href="https://ReactForBeginners.com">React For Beginners</a>
+            <span class="code">CSS, JS</span>
+            <a href="https://loubarb.github.io/guess-the-word/" target="_blank">Guess The Word</a>
           </li>
           <li>
-            <span class="code">ES6</span>
-            <a href="https://ES6.io">ES6 For Everyone</a>
+            <span class="code">React, JSX</span>
+            <a href="https://catch-of-the-day-loubarb.netlify.app" target="_blank">Catch Of The Day</a>
           </li>
           <li>
-            <span class="code">NODE</span>
-            <a href="https://LearnNode.com">Learn Node</a>
+            <span class="code">React, JSX</span>
+            <a href="https://dyt9vw.csb.app/" target="_blank">Sticky Notes App</a>
           </li>
           <li>
-            <span class="code">STPU</span>
-            <a href="https://SublimeTextBook.com">Sublime Text Power User</a>
+            <span class="code">CSS, Flexbox</span>
+            <a href="https://loubarb.github.io/unplugged-retreat/" target=""_blank>Unplugged Retreat</a>
           </li>
           <li>
-            <span class="code">WTF</span>
-            <a href="http://Flexbox.io">What The Flexbox?!</a>
-          </li>
-          <li>
-            <span class="code">GRID</span>
-            <a href="https://CSSGrid.io">CSS Grid</a>
-          </li>
-          <li>
-            <span class="code">LRX</span>
-            <a href="http://LearnRedux.com">Learn Redux</a>
-          </li>
-          <li>
-            <span class="code">CLPU</span>
-            <a href="http://CommandLinePowerUser.com">Command Line Power User</a>
-          </li>
-          <li>
-            <span class="code">MMD</span>
-            <a href="http://MasteringMarkdown.com">Mastering Markdown</a>
+            <span class="code">CSS, JS</span>
+            <a href="https://loubarb.github.io/flex-panels-image-gallery/" target="_blank">Flex Panels</a>
           </li>
         </ul>
       </li>
       <li>
         <a href="#">Other Links</a>
         <ul class="dropdown dropdown3">
-          <li><a class="button" href="http://twitter.com/wesbos">Twitter</a></li>
-          <li><a class="button" href="http://facebook.com/wesbos.developer">Facebook</a></li>
-          <li><a class="button" href="http://wesbos.com">Blog</a></li>
-          <li><a class="button" href="http://wesbos.com/courses">Course Catalog</a></li>
+          <li><a class="button-twitter" href="http://twitter.com/loubarbcodes">Twitter</a></li>
+          <li><a class="button-linkedin" href="https://linkedin.com/in/louisbarbaticodes/">LinkedIn</a></li>
+          <li><a class="button" href="https://github.com/loubarb">Github</a></li>
+          <li><a class="button-portfolio" href="http://loubarb.com">Portfolio</a></li>
         </ul>
       </li>
     </ul>
@@ -205,7 +193,7 @@
     color: #ffc600;
   }
 
-  a.button {
+  a.button, a.button-twitter, a.button-linkedin, a.button-portfolio {
     background: black;
     display: block;
     padding: 10px;
@@ -213,10 +201,18 @@
     margin-bottom: 10px;
   }
 
-  /* Matches Twitter, TWITTER, twitter, tWitter, TWiTTeR... */
-  .button[href*=twitter] { background: #019FE9; }
-  .button[href*=facebook] { background: #3B5998; }
-  .button[href*=courses] { background: #ffc600; }
+  a.button-twitter { 
+    background: #019FE9; 
+  }
+
+  a.button-linkedin { 
+    background: #3B5998; 
+  }
+
+  a.button-portfolio { 
+    background: #ffc600; 
+  }
+
 </style>
 
 <script>
@@ -226,12 +222,13 @@
 
   function handleEnter() {
     this.classList.add('trigger-enter');
+    // if statement to prevent content from appearing when hovering back and forth quickly
     setTimeout(() => {
       if(this.classList.contains('trigger-enter')) {
         this.classList.add('trigger-enter-active');
       }
     }, 150);
-    
+
     background.classList.add('open');
 
     // declare here since theres multiple dropdowns and is dynamic
